@@ -18,7 +18,11 @@ class Car {
 public:
     std::string model;
     int year;
+    std::string color;
 
+    Car() : model("Unknown"), year(0), color("Unknown") {}
+
+    Car(std::string m, int y, std::string c) : model(m), year(y), color(c) {}
 
     void displayDetails() {
         std::cout << "Model: " << model << ", Year: " << year << ", Color: " << color << std::endl;
@@ -26,12 +30,11 @@ public:
 };
 
 int main() {
-    Car myCar;
-
-
+    Car myCar("Honda Accord LXP", 2012, "Silver");
     myCar.displayDetails();
 
     return 0;
 }
 
 ```
+
